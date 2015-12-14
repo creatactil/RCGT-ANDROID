@@ -1,0 +1,61 @@
+@charset "utf-8";
+/* CSS Document */
+
+.granate {
+	color: #542876;
+}
+h1{
+	font-family: sans-serif;
+	color:#FFF;
+	text-shadow: 0  0px  0  #f3f3f3
+	}
+
+#page13 #contepagina13 center label {
+	color: #93C;
+	font-size: 18px;
+	font-weight: bold
+}
+
+
+#page4 div div ul li a {
+	font-family: sans-serif;
+	font-size: small;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	color:#FFF;
+	background-image: url(imgportada/cabecera.png);
+	text-shadow: 0  0px  0  #f3f3f3
+}
+
+#page5 div div ul li a {
+	font-family: sans-serif;
+	font-size: small;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	color:#FFF;
+	background-image: url(imgportada/cabecera.png);
+	text-shadow: 0  0px  0  #f3f3f3
+}
+#page8 div div ul li a {
+	font-family: sans-serif;
+	font-size: small;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	color:#FFF;
+	background-image: url(imgportada/cabecera.png);
+	text-shadow: 0  0px  0  #f3f3f3
+}
+#page14 div div ul li a {
+	font-family: sans-serif;
+	font-size: small;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	color:#FFF;
+	background-image: url(imgportada/cabecera.png);
+	text-shadow: 0  0px  0  #f3f3f3
+}
+

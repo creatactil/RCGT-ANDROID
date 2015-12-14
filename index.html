@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--Version Web-->
+
+<title>RCGT</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+
+
+	<link rel="stylesheet" href="themes/tema.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="jqm145/jquery.mobile.structure-1.4.5.min.css"/>
+  
+   
+	
+	<script src="jqm145/jquery-1.11.1.min.js"></script>
+	<script src="jqm145/jquery.mobile-1.4.5.min.js"></script>
+
+<link rel="shortcut icon" href="imagenes/icono.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="114.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="144.png" />
+
+<script type="text/javascript" src="phonegap.js"></script>
+<script type="text/javascript" src="PushNotification.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+<script type="text/javascript"> 
+        //El registro al servicio de google lo hacemos automáticamente
+       app.initialize();
+	
+</script>
+
+<style type="text/css">
+.granate {
+	color: #542876;
+}
+
+</style>
+
+<script src="js/borrafavorito.js"></script>
+<script src="js/borrarmensaje.js"></script>
+<script src="js/desconectar.js"></script>
+
+<script src="js/favorito.js"></script>
+<script src="js/firma.js"></script>
+
+<script src="js/globo.js"></script>
+<script src="js/init.js"></script>
+
+<script src="js/inicio.js"></script>
+<!--<script src="js/lasesion.js"></script> -->
+<script src="js/listamensajes.js"></script>
+<script src="js/listafavorito.js"></script>
+<script src="js/listaweb.js"></script>
+
+<script src="js/loginval2.js"></script>
+
+
+<script src="js/mostrarDatos.js"></script>
+<script src="js/onLoad.js"></script>
+<script src="js/passemail.js"></script>
+
+<script src="js/registrarColegiado.js"></script>
+
+
+</head> 
+<body onLoad="init()"> 
+<!-------------------------------------PAGINA 0---------------------------------------------------------------------->
+<div data-role="page" data-theme="a" id="pagina0">
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+  <div data-role="header">
+  
+    <label style="font-weight: bold; font-size: small; color: #fff; text-align: center; margin-top:6px" >REAL CLUB DE GOLF</label>
+    <label style="font-weight: bold; font-size: small; color: #fff; text-align: center; margin-top:-5px">DE TENERIFE</label> 
+  </div>
+	
+  <div data-role="main" class="ui-content" >
+  
+         <div class="ui-grid-solo" align="center" style="width:90%; margin-left:5%; margin-top:15%; margin-bottom:15%; ">
+         <form name="form2" id="form2" method="POST">
+    			<label for="usuario" >Correo electrónico:</label>        
+        		<input name="usuario" type="email" id="usuario" autofocus>        
+     			<!---------->         
+        		<label for="pa2">Contraseña:</label>
+        		<input type="password" name="pa2" id="pa2"> 
+                <a data-role="button"  data-icon="check" data-transition="slide" onClick="loginVal2()" data-inline="true" style="width:65px;  color: #fff;  text-shadow:none">Entrar</a>
+                <a data-role="button" data-icon="edit" href="#page7" style="width:65px; color: #fff;  text-shadow:none" data-inline="true">Registro</a>
+                              		
+           </form> 
+              <br><br><a href="" onClick="passEmail()">He olvidado mi contraseña</a>                
+		</div>
+                      
+	 </div>
+
+  <div data-role="footer" data-position="fixed">
+   
+   	<label style="font-size:15px;"><center>&copy; Todos los derechos reservados creaTáctil</center></label>
+   
+  </div>
+  
+</div> 
+<!---------------FIN PAGINA 0----------------------------------------->
+
+<!----------------------------PAGINA 1-------------------------------->
+<div data-role="page" id="page1" data-theme="a" >  
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+ <div data-role="panel" id="overlayPanel" data-display="overlay" data-theme="a"> 
+    <h3>Menú</h3>
+    <div style="width:98%" data-theme="a">
+<ul data-role="listview">
+    <li data-icon="bullets" ><a href="#" onClick="mostrarDatos()" style="text-shadow:none">Registro</a></li>
+    <li data-icon="mail" ><a onClick="crearLista()" style="text-shadow:none">Circulares</a></li>
+    <li data-icon="star"><a onClick="listafavorito()" style="text-shadow:none">Favorito</a></li>
+    <li data-icon="navigation"><a href="#page15" data-transition="slide" style="text-shadow:none">Web y Redes Sociales</a></li>
+    <li data-icon="info"><a href="#page5" data-transition="slide" style="text-shadow:none">Ayuda</a></li>
+    <li data-icon="info"><a href="#page8" data-transition="slide" style="text-shadow:none">Contacto</a></li>
+    <li data-icon="power" ><a onClick="desconectar()" style="text-shadow:none">Salir app</a></li>
+    <li data-icon="delete"><a href="#pageone" data-rel="close" style="text-shadow:none">Cerrar menú</a></li>
+    
+</ul>
+<br>
+<br>
+<center>
+App Diseñada por creaTáctil S.L.
+<a onClick="window.open('http://www.creatactil.com','_blank','location=no','closebuttoncaption=Return')">www.creatactil.com</a>
+</center>
+    </div>
+ </div>
+
+  
+    
+    <div data-role="header" data-theme="a">
+		<a href="#overlayPanel" data-role="button" data-icon="bars" data-iconpos="notext"></a>
+    <label style="font-weight: bold; font-size: small; color: #fff; text-align: center; margin-top:6px;margin-left:25px">REAL CLUB DE GOLF</label> 
+    <label style="font-weight: bold; font-size: small; color: #fff; text-align: center; margin-top:-5px; margin-left:25px">DE TENERIFE</label> 
+       
+        <a href="" data-role="button" class="ui-btn-right" data-mini="true" data-icon="action" onClick="" data-iconpos="notext"></a>
+    </div >
+    
+    <div data-role="main" class="ui-content" style="margin:0; padding:0; position:fixed; width:100%">
+   <!-- <br>
+    <center><img id="escudo" src="imgportada/escudo_final.png" width="40%"></center>
+    <br> -->
+   
+    <img id="" src="imgportada/portada.jpg" height="0%" width="100%">
+    
+    </div> 
+    
+    <!--footer-->  
+    <div data-role="footer" data-theme="a" data-position="fixed" >
+    
+    
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#" data-role="button" onClick="mostrarDatos()" data-icon="bullets">Registro</a></li>
+    <li><a href="#" data-role="button" onClick="crearLista()" data-icon="mail"><img class="globo" style="float:left; width:15px;">Circulares</a></li>
+    <li><a href="#" data-role="button" onClick="listafavorito()" data-icon="star">Favoritos</a></li>
+    <li><a href="#page15" data-role="button" data-transition="slide" data-icon="navigation">Web</a></li>
+    </ul>
+	</div>
+   
+   <!--PUBLICIDAD  <center><a onClick="web()"><img src="http://mc.creatactil.com/imagenes/banner.png" height="30px" style="margin-top:0.3em"></a></center>--> 
+    
+    </div>
+    
+</div>
+
+
+<!----------------------------PAGINA 2-------------------------------->
+<div data-role="page" id="page2" data-theme="a">
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header" data-theme="a">
+    
+    <a class="ui-btn-left" data-mini="true" href="#pagina0" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a"></a>
+       		<h1>REGISTRO</h1>
+       
+	</div>
+	
+    
+    
+    <div data-role="content" id="contenido1"  >	
+		
+        
+        <form name="formulario1" id="formulario1">
+        
+              
+        <label for="numero">Número de Socio</label>  
+      	<input name="numero" type="text"  id="numero" placeholder="Nº Socio" maxlength="8">
+        
+        <label for="nombre">Nombre:</label>
+        <input name="nombre" type="text" id="nombre" value="" placeholder="Nombre">
+        
+        <label for="apellidos">Apellidos:</label>
+        <input name="apellidos" type="text" id="apellidos" value="" placeholder="Apellidos">
+       
+        <label for="telefono">Teléfono móvil:</label>
+        <input name="telefono" type="text"  id="telefono" placeholder="Telefono" maxlength="9">
+        
+        <label for="correo">Correo electrónico:</label>
+        <input name="correo" type="text" id="correo" placeholder="Correo electrónico">
+       	  
+       <label for="pa1">Contraseña:</label>
+       <input name="pa1" id="pa1" type="password" placeholder="Max. 20 caracteres">
+            
+          
+           <input name="regId" id="regId" type="hidden">    
+  		</form>  
+        
+       	 <div id="deviceready" class="blink" hidden="true">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+      </div>  
+	
+    
+     		<!-- Botones de registro 	
+ 		 <fieldset class="ui-grid-b">
+           
+           <div class="ui-block-a"></div>
+           <div class="ui-block-b">--->
+ <a href="#" data-role="button" data-transition="slide" data-icon="check" id="enviadatos" style="margin-left:1em; margin-right:1em;  text-shadow:none; color:#FFF" onClick="registrarColegiado()">Guardar</a>
+ 		<!--	</div>	
+    		 <div class="ui-block-b">
+    <a data-role="button" name="link" href="" data-icon="plus" onClick="validarDni2()" style="margin-right:1em; margin-left:5%">Modificar Datos Alumn@s</a>
+    		</div> 
+            </fieldset>------>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>				
+    
+    <!-- Pie de pagina dos -->  
+	<div data-role="footer" data-position="fixed" data-theme="a">
+	        <div data-role="controlgroup" >
+           
+            
+            </div>
+    </div>
+	
+</div>
+
+
+<!----------------------------PAGINA 4-------------------------------->
+<div data-role="page" id="page4" data-theme="a">
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header" data-theme="a">   
+	  <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo()" data-theme="a">Atrás</a>
+      <h1>CIRCULARES</h1>
+	<!--<a href="#page1" data-role="button" data-icon="home" onClick="inicio()">Inicio</a> -->
+    </div> 
+	
+	 <div data-role="content" id="contenido">
+		
+		   <!-- Aqui se añade el listado de mensajes -->
+		  <ul data-role="listview"  id="lista"  data-inset="true"  >
+		  
+          </ul>
+          
+           <ul data-role="listview"  id="lista1"  data-inset="true" >
+		  </ul>
+	 		<center><div id="carga23"><img src="imagenes/cargando.gif" style="margin-top:10%"></div></center>
+       <br><br><br><br><br><br><br><br>
+</div> 
+        
+        
+        
+    <!--Pie de pagina ---->
+   <div data-role="footer" data-theme="a" data-position="fixed" id="piepagina">
+    
+    </div>
+   <!--Final Pie de pagina -->
+    
+   
+    
+ 
+</div>
+<!----------------------------PAGINA 5-------------------------------->
+<div data-role="page" id="page5" data-theme="a">
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header" data-theme="a">
+    <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo(), portada()" data-theme="a">Atrás</a>
+		<h1 style=" margin-left:20px; margin-right:20px">PÁGINA DE AYUDA</h1>
+	</div>
+	
+    <div data-role="content">	
+			   
+            
+            <p><a href="#" data-role="button" data-icon="bullets" data-iconpos="notext" data-inline="true"></a><strong>Registro y modificación</strong><br>
+            	<ul>
+                 <li>Introduzca sus datos.</li>
+                 <li>Asegúrese de que éstos son correctos para que la aplicación funcione adecuadamente. A continuación presione el botón <strong>"Guardar"</strong>.<br></li>
+               </ul>                
+         
+             <a href="#" data-role="button" data-icon="mail" data-iconpos="notext" data-inline="true"></a><strong>Circulares</strong><br>
+             <ul>
+             <li>En este apartado se muestran todas la circulares enviadas por la Entidad a nuestra aplicación móvil.</li>
+             <li> Presionando sobre el título de la circular accederá a su lectura.</li>
+             <li>Pulsando sobre el icono <strong>"X"</strong> se borrará la circular elegida.</li>
+             </ul>
+ <a href="#" data-role="button" data-icon="navigation" data-iconpos="notext" data-inline="true"></a><strong>Página Web</strong>
+ 	<ul>
+    <li> En esta opción accederá a la página web de la Entidad y a sus redes sociales.</li>
+    </ul>
+<a href="#" data-role="button" data-icon="phone" data-iconpos="notext" data-inline="true"></a><strong>Contacto</strong>
+ 	<ul>
+    <li> Nuestro correo de contacto: info@creatactil.com.</li>
+    </ul>
+           </p>
+		      <center><strong>
+<label>&copy; Todos los derechos reservados creaTáctil. </label></strong><a href="" onClick="window.open('http://rcgt.creatactil.com/politica de privacidad/index.html','_blank','location=no','closebuttoncaption=Return')">Aviso Legal y Política de Privacidad</a></center>     
+	</div>
+   
+  <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
+    <li><a href="#" data-role="button" onClick="crearLista()" data-icon="mail"><img class="globo" style="float:left; width:15px;">Circulares</a></li>
+    <li><a href="#" data-role="button" onClick="listafavorito()" data-icon="star">Favoritos</a></li>
+    <li><a href="#page15" data-role="button" data-transition="slide" data-icon="navigation">Web</a></li>
+    </ul>
+	</div>
+ 
+    </div>
+	 
+</div> 
+<!----------------------------PAGINA 6-------------------------------->
+<div data-role="page" id="page6" data-theme="a" >
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header" data-theme="a">
+    <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo(), portada()" data-theme="a">Atrás</a>  
+	  <h1>PÁGINA WEB</h1>
+	</div> 
+	
+	 <div data-role="content" id="contenweb" >
+			
+		   <!-- Aqui se añade el listado de mensajes -->
+		  <ul data-role="listview"  id="listaweb"  data-inset="true" >
+		  	
+		  </ul>
+	   <center><div id="carga35"><img src="imagenes/cargando.gif" style="margin-top:10%"></div></center>
+       
+       
+	</div>
+   
+    <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
+    <li><a href="#" data-role="button" onClick="crearLista()" data-icon="mail"><img class="globo" style="float:left; width:15px;">Circulares</a></li>
+    <li><a href="#" data-role="button" onClick="listafavorito()" data-icon="star">Favoritos</a></li>
+    <li><a  href="#page15" data-role="button"  data-transition="slide" data-icon="navigation">Web</a></li> 
+    </ul>
+	</div>
+ 
+    </div>
+ 
+</div>
+
+<!----------------------------PAGINA 7-------------------------------->
+<div data-role="page" id="page7" data-theme="a" >
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+    <div data-role="header" data-theme="a"> 
+     
+	  <h1>Política de Privacidad y LOPD</h1>
+	</div> 
+	
+	 <div data-role="content" id="ley">
+     			<center>
+            <div data-role="controlgroup" data-type="horizontal">
+            <a href="#pagina0" data-role="button" data-icon="back">Cancelar</a>
+			<a href="#page2" data-role="button" data-icon="check">Aceptar</a>
+            </div>
+            </center>
+     
+     
+			<p>
+            <strong>POLÍTICA DE TRATAMIENTO DE DATOS DE CARÁCTER PERSONAL </strong><br>
+            En cumplimiento de lo establecido en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, se pone en conocimiento de los usuarios de este sitio web lo siguiente: <br>
+            
+<strong>1.</strong> Los datos que los usuarios faciliten a CREATÁCTIL S.L. serán incorporados a una base de datos de la que es titular y responsable CREATÁCTIL S.L., CIF B76629021.<br>
+<strong>2.</strong> Los usuarios garantizarán los datos de carácter personal, su veracidad, exactitud, autenticidad y vigencia. En este sentido, será obligación de los usuarios mantener actualizados los datos de forma tal que correspondan a la realidad en cada momento.<br>
+<strong>3.</strong> Al facilitar datos de carácter personal a CREATÁCTIL S.L., mediante la cumplimentación de formularios de recogida de datos o su envío a través de cualquier otro medio, los usuarios declaran aceptar plenamente y sin reservas la incorporación de los datos facilitados a los ficheros de la mercantil CREATÁCTIL S.L. y su tratamiento automatizado, en los términos estipulados en el presente documento.
+Los citados ficheros están oportunamente comunicados e inscritos en el Registro General de la Agencia española de Protección de Datos, al que los usuarios pueden acceder gratuitamente si así lo desean para comprobar su situación.<br> 
+<strong>4.</strong> La recogida de datos personales y su tratamiento automatizado tiene como finalidad posibilitar o facilitar la gestión, administración, mejora y ampliación de los distintos servicios, la elaboración de estadísticas, la gestión o seguimiento de incidencias, o servicios ofrecidos por info@creatactil.com.<br>
+<strong>5.</strong> CREATÁCTIL S.L en ningún caso venderá ni arrendará datos personales de los usuarios. El usuario podrá denegar o revocar su consentimiento mediante el envío de un e-mail a info@creatactil.com.<br>
+<strong>6.</strong> Los usuarios podrán ejercitar, en cualquier momento, los derechos de acceso, rectificación, cancelación y oposición de sus datos personales. El ejercicio de estos derechos podrá efectuarse mediante el envío de un e-mail a info@creatactil.com y de forma escrita al Real Club de Golf de Tenerife acompañado de fotocopia de su DNI.<br>
+<strong>7.</strong> CREATÁCTIL S.L se compromete a no recabar información innecesaria sobre sus usuarios, a tratar con extrema diligencia la información personal que le puedan facilitar, y a cumplir en cualquier fase del tratamiento con la obligación de guardar secreto respecto de los datos facilitados por los usuarios. 
+Asimismo, CREATÁCTIL S.L se compromete a adoptar en todo momento los niveles de seguridad legalmente requeridos, para evitar la pérdida, mal uso, alteración, acceso no autorizado o robo de datos personales, implementando a dicho fin todos los medios y sistemas técnicos a su alcance, habida cuenta del estado de la tecnología, la naturaleza de los datos almacenados y los riesgos a que están expuestos, ya provengan de la acción humana o del medio físico o natural. Ello no obstante, los usuarios deben ser conscientes de que las medidas de seguridad en Internet no son inexpugnables, y asumir los riegos que ello conlleva. <br>
+<strong>8.</strong> CREATÁCTIL S.L se reserva el derecho de modificar en cualquier momento su política de tratamiento y seguridad de datos personales, siempre respetando la legislación vigente en materia de protección de datos, y previa comunicación a los interesados, bien mediante publicación en esta misma página o en cualquier otro lugar del website, bien mediante e-mail a los interesados, o por cualquier otro medio de comunicación o difusión que se considere oportuno.<br>
+<strong>9.</strong> CREATÁCTIL S.L, le informa sobre la cesión de los datos de los socios al Real Club de Golf de Tenerife.
+La finalidad de la cesión es actualizar la base de datos del Real Club de Golf de Tenerife. Se podrán ejercitar los derechos de acceso, rectificación, cancelación u oposición según dispone en el apartado 6.
+</p>
+		
+
+            </div>
+    
+ 
+</div>
+<!----------------------------PAGINA 8------------------------------->
+<div data-role="page" id="page8" data-theme="a">
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header" data-theme="a">
+    <a href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" onClick="globo(), portada()" data-theme="a">Atrás</a>
+		<h1 style=" margin-left:20px; margin-right:20px">PÁGINA DE CONTACTO</h1>
+	</div>
+	
+    <div data-role="content">	
+		<center>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.746268997206!2d-16.3815160849207!3d28.487186982475297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41d247698cae71%3A0x6faa5252c87d755f!2sReal+Club+de+Golf+de+Tenerife!5e0!3m2!1ses-419!2ses!4v1449828986538" width="98%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</center>
+		<p>
+            <a href="#" data-role="button" data-icon="bullets" data-iconpos="notext" data-inline="true"></a><strong>Dirección</strong><br>
+            	<ul>
+                 <li>C/ Campo de Golf, 1</li>
+                 <li>38050 El Peñon Tacoronte</li>
+                 <li>Santa Cruz de Tenerife. España</li>
+               </ul>                
+            <a href="#" data-role="button" data-icon="phone" data-iconpos="notext" data-inline="true"></a><strong>Teléfonos</strong>
+ 			<ul>
+    			<li> Teléfono de contacto: <a href="tel:922636607">922636607</a></li>
+    			<li> Fax de contacto: 922636480</li>
+            </ul>   
+            <a href="#" data-role="button" data-icon="mail" data-iconpos="notext" data-inline="true"></a><strong>Correo</strong>
+ 			<ul>
+            	<li> Correo de contacto: <a href="mailto:reservas@rcgt.es">Reservas</a></li>
+    		</ul>
+            </p>
+		         
+	</div>
+    
+  <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="navbar" >
+    <ul>
+    <li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
+    <li><a href="#" data-role="button" onClick="crearLista()" data-icon="mail"><img class="globo" style="float:left; width:15px;">Circulares</a></li>
+    <li><a href="#" data-role="button" onClick="listafavorito()" data-icon="star">Favoritos</a></li>
+    <li><a href="#page15" data-role="button" data-transition="slide" data-icon="navigation">Web</a></li>
+    </ul>
+	</div>
+ 
+    </div>
+	 
+</div> 
+<!---------------------------- PAGINA 11 -------------------------------->
+<div data-role="page" id="page11" data-theme="a" >
+	<!--<div style="height:20px; visibility:hidden"> </div>-->
+    <div data-role="header" data-theme="a">  
+	  <h1>FIRMAR</h1>
+	</div> 
+	
+	 <div data-role="content" id="firma">
+	   <p>
+           <strong>Titulo: </strong><span id="titulofirma" ></span>
+	   		<br>
+            <br>
+           	Nº de registro: <span id="registrofirma" ></span>
+            <br>
+            <span id="codigofirma" hidden="true"></span>
+	   </p>
+		
+		 
+	   	    
+            <center>
+            <div data-role="controlgroup" data-type="horizontal">
+             <a href="#page1" data-role="button"  data-icon="back">Rechazar</a>
+			<a href="#" data-role="button" onClick="firma()" data-icon="check">Aceptar</a>
+            </div>
+            </center>
+            </div>
+    
+ 
+</div>
+<!----------------- FIN PAGINA 11 -------------------->
+
+
+
+<!---------------------------- PAGINA 14 -------------------------------->
+
+<div data-role="page" id="page14" data-theme="a" >
+	<!--<div style="height:20px; visibility:hidden"> </div>--> 
+	 <div data-role="header"  data-theme="a">   
+	  <a href="#page1" data-role="button" data-icon="carat-l" data-iconpos="notext" onClick="globo()" data-theme="a" >Atrás</a>
+      <h1>FAVORITOS</h1>
+	
+    </div> 
+	
+	 <div data-role="content" id="contenido14">
+			
+		   <!-- Aqui se añade el listado de mensajes -->
+		  <ul data-role="listview"  id="listafav"  data-inset="true">
+		  </ul>
+          
+           <ul data-role="listview"  id="listafav1"  data-inset="true" >
+		  </ul>
+	 		<center><div id="carga14"><img src="imagenes/cargando.gif" style="margin-top:10%"></div></center>
+    		<br><br><br><br><br><br><br><br>
+</div> 
+     
+    <!--Pie de pagina -->
+ <div data-role="footer" data-theme="a" data-position="fixed" id="piepagina14">
+    
+    </div>
+   <!--Final Pie de pagina -->
+    
+ 
+</div>
+<!---------------------------- FIN PAGINA 14 --------------------------------> 
+
+<!---------------------------------  PAGE 15  ------------------------------->
+<div data-role="page" data-theme="a" id="page15">
+		<!--<div style="height:20px; visibility:hidden"> </div>--> 
+       <div data-role="header">
+      <a class="ui-btn-left" data-mini="true" href="#page1" data-role="button" data-transition="slide" data-icon="carat-l" data-iconpos="notext" data-theme="a"></a>
+       <h1>WEB</h1>
+        
+      </div>
+	
+      <div data-role="main" class="contenedorredes" >
+      
+      
+      
+      	<div class="ui-grid-a" style="margin-top:10%" >
+        	<div class="ui-block-a">
+            	<center><a onClick="window.open('http://www.rcgt.es/','_system');"><img src="imagenes/web.png" width="60" height="60"/></a></center>          
+            </div>
+            <div class="ui-block-b">        
+            	<center><a onClick="window.open('https://vimeo.com/user11552159','_system');"><img src="imagenes/vimeo.png" width="60" height="60"/></a></center> 
+            </div>          
+        </div>
+        <div class="ui-grid-a" style="margin-top:10%;">
+        	<div class="ui-block-a">
+            	<center>
+                <a href="" onClick="window.open('https://www.facebook.com/golftacoronte','_system');"><img src="imagenes/face.png" width="60" height="60"/></a></center>                          
+           </div>
+           <div class="ui-block-b">        
+            	<center><a onClick="window.open('https://plus.google.com/116871020359835754601','_system');"><img src="imagenes/googleplus.png" width="60" height="60"/></a></center>
+          </div>          
+       </div>
+       <div class="ui-grid-a" style="margin-top:10%;">  
+          <div class="ui-block-a">
+            	<center>
+                <a href="tel:922636607" ><img src="imagenes/telefono.png" width="60" height="60"/></a></center>                          
+           </div>
+           <div class="ui-block-b">        
+            	<center><a a href="mailto:reservas@rcgt.es"><img src="imagenes/correo.png" width="60" height="60"/></a></center>
+          </div>
+        
+        
+        
+        </div>
+        
+      		
+      </div>
+
+      <!--footer-->  
+     <!--footer-->  
+    <div data-role="footer" data-theme="a" data-position="fixed" >
+    	<div data-role="navbar" >
+   			 <ul>
+    			<li><a href="#page1" data-role="button" data-transition="slide" onClick="globo()" data-icon="home">Inicio</a></li>
+   				 <li><a href="#" data-role="button" onClick="crearLista()" data-icon="mail"><img class="globo" style="float:left; width:15px;" >Circulares</a></li>
+    			<li><a href="#" data-role="button" onClick="listafavorito()" data-icon="star">Favoritos</a></li>
+    			<li><a href="#page5" data-role="button" data-transition="slide" data-icon="info">Ayuda</a></li>
+    		</ul>
+		</div>
+    </div>
+  
+</div> 
+<!---------------FIN PAGE 15----------------------------------------------------------------> 
+
+  
+</body>
+</html>
