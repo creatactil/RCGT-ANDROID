@@ -205,7 +205,7 @@ function descargarArchivo(nombre){
                 var filename = nombre;
                 var uri = encodeURI(server + filename);
                 
-				alert(uri);
+				
 
                 window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onErrorCallback);
 
