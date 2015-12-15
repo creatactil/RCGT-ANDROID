@@ -54,7 +54,7 @@ var app = {
         if (device.platform == 'android' || device.platform == 'Android') {
             //alert("Llamada a ANDROID");
             //tu Project ID aca!!
-            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"866773177554","ecb":"app.onNotificationGCM"});
+            pushNotification.register(this.successHandler, this.errorHandler,{"senderID":"109603757979","ecb":"app.onNotificationGCM"});
         }
         else {
             //alert("LLamada a APPLE");
