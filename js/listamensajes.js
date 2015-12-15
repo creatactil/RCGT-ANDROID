@@ -205,7 +205,7 @@ function descargarArchivo(nombre){
                 var filename = nombre;
                 var uri = encodeURI(server + filename);
                 
-
+				alert(uri);
 
                 window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onFileSystemSuccess, onErrorCallback);
 
@@ -266,7 +266,7 @@ function descargarArchivo(nombre){
 function abrirfichero(ruta3){
 	
 	console.log(ruta3);
-	window.open (ruta3, '_system', 'location yes,closebuttoncaption=done,enableViewportScale=yes');
+	window.open (ruta3, '_system', 'location=yes,closebuttoncaption=done,enableViewportScale=yes');
 	
 	
 	}
