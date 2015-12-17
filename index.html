@@ -35,6 +35,35 @@
 	
 </script>
 
+<script>
+ $( document ).ready(function() {
+      	  
+	   var isMobile = {
+      
+    iTABLET: function() {
+        return navigator.userAgent.match(/tablet/i);
+    },
+	
+	iMOBILE: function() {
+        return navigator.userAgent.match(/mobile/i);
+    },
+	
+        
+ };
+	   
+	    if (isMobile.iTABLET()){
+    		
+			$("#portada").attr("src", "imgportada/portada2.jpg");
+		
+		}else if (isMobile.iMOBILE()){
+    		
+			$("#portada").attr("src", "imgportada/portada.jpg");
+		}
+    
+	});
+</script>
+
+
 <style type="text/css">
 .granate {
 	color: #542876;
@@ -143,11 +172,8 @@ App Diseñada por creaTáctil S.L.
     </div >
     
     <div data-role="main" class="ui-content" style="margin:0; padding:0; position:fixed; width:100%">
-   <!-- <br>
-    <center><img id="escudo" src="imgportada/escudo_final.png" width="40%"></center>
-    <br> -->
    
-    <img id="" src="imgportada/portada.jpg" height="0%" width="100%">
+   	<img id="portada" src="" height="0%" width="100%">
     
     </div> 
     
