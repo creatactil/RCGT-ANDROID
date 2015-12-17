@@ -5,20 +5,6 @@ function onLoad() {
     function onDeviceReady() {   
    
         document.addEventListener("backbutton", onBackKeyDown, false); 
-		
-		window.plugins.uniqueDeviceID.get(exito, error);
-		
-		function exito(uuid)
-			{
-    			var xuuid = uuid;
-				
-				localStorage.uuid = xuuid;
-				alert (xuuid);
-				
-				console.log(uuid);
-			};
-		
-		
      
     } 
    

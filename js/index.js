@@ -83,6 +83,17 @@ var app = {
 					localStorage.regid = e.regid;
 					alert (e.regid);
 					
+					
+					var uuid = device.uuid;
+		
+					localStorage.uuid = uuid;
+					alert (uuid);
+				
+					console.log(uuid);
+			
+					
+					
+					
                 }
             break;
  
@@ -105,6 +116,8 @@ var app = {
     onNotificationAPN: function(event) {
         var pushNotification = window.plugins.pushNotification;
         //alert("Running in JS - onNotificationAPN - Received a notification! " + event.alert);
+		
+		
         
         if (event.alert) {
            // navigator.notification.alert(event.alert);
