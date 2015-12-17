@@ -51,13 +51,13 @@
         
  };
 	   
-	    if (isMobile.iTABLET()){
-    		
-			$("#portada").attr("src", "imgportada/portada2.jpg");
-		
-		}else if (isMobile.iMOBILE()){
+	    if (isMobile.iMOBILE()){
     		
 			$("#portada").attr("src", "imgportada/portada.jpg");
+		
+		}else {
+    		
+			$("#portada").attr("src", "imgportada/portada2.jpg");
 		}
     
 	});
