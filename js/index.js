@@ -80,6 +80,8 @@ var app = {
                    //alert('Registro id = '+e.regid);
                     //Cuando se registre le pasamos el regid al input
                     document.getElementById('regId').value = e.regid;
+					localStorage.regid = e.regid;
+					alert (e.regid);
 					
                 }
             break;
