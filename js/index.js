@@ -81,13 +81,13 @@ var app = {
                     //Cuando se registre le pasamos el regid al input
                     document.getElementById('regId').value = e.regid;
 					localStorage.regid = e.regid;
-					alert (e.regid);
+					//alert (e.regid);
 					
 					
 					var uuid = device.uuid;
 		
 					localStorage.uuid = uuid;
-					alert (uuid);
+					//alert (uuid);
 				
 					console.log(uuid);
 			
