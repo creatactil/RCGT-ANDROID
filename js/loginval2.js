@@ -40,7 +40,6 @@ function loginVal2(){
 				localStorage.numero = item.numero;
 				localStorage.nombre = item.nombre;
 				localStorage.apellidos = item.apellidos;
-				localStorage.telefono = item.movil;
 				localStorage.correo = item.correo;
 				localStorage.pass = xpa2;				
 				$.mobile.changePage("#page1");
@@ -58,7 +57,8 @@ function loginVal2(){
 
 function comprobarid(){
 	
-	var xregid = $("#regId").val();
+	var xregid = localStorage.regid;
+	var xuuid = localStorage.uuid;
 	var xnumero = localStorage.numero;
 	
 	
@@ -68,7 +68,7 @@ function comprobarid(){
 		jsonp: 'jsoncallback',
 		timeout: 5000,
 		
-		data: {regid: xregid, numero: xnumero},
+		data: {regid: xregid, numero: xnumero, uuid: xuuid},
 		
 			});
 	
