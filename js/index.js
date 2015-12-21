@@ -65,9 +65,9 @@ var app = {
     successHandler: function(result) {
        //alert('Callback Success! Result = '+result)
 	   document.getElementById('regId').value = result;
-	   localStorage.regid = result;
-					alert (e.regid);
-					console.log(result);
+	   /*localStorage.regid = result;
+					alert (result);
+					console.log(result);*/
 					
 					var uuid = device.uuid;
 		
@@ -77,7 +77,7 @@ var app = {
 					console.log(uuid);
 	   
 	   
-	   //alert(result);
+	   alert(result);
     },
     errorHandler:function(error) {
         alert(error);
