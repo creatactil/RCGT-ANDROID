@@ -12,7 +12,7 @@
 			Real Club de Golf de Tenerife
     </description>
 
-    <author href="http://www.creatactil.com" email="info@creatactil.com">
+    <author href="http://www.creatactil.com" email="venazcocabrera@gmail.com">
         Creatactil S.L.
     </author>
 	
@@ -44,7 +44,7 @@
   
     <!-- Plugins -->
 	
-		<plugin name="com.phonegap.plugins.pushplugin" source="pgb" spec="2.5.0" />
+		<plugin name="com.phonegap.plugins.pushplugin" source="pgb" spec="2.4.0" />
 		<plugin name="hu.dpal.phonegap.plugins.uniquedeviceid" source="pgb" spec="1.2.0" />
 		<plugin name="org.apache.cordova.battery-status" source="pgb" spec="0.2.11" />
 		<plugin name="org.apache.cordova.camera" source="pgb" spec="0.3.2" />
