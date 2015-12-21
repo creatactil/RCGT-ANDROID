@@ -9,7 +9,9 @@ function registrarColegiado() {
 								
 				var xregid = localStorage.regid;
 				var xuuid = localStorage.uuid;
-									
+					
+					alert (xregid);	
+					alert (xuuid);			
 				
 		if(document.formulario1.numero.value.length ==  ""){
 		alert("Escriba su número de Socio");
