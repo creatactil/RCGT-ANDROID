@@ -1,17 +1,15 @@
 function registrarColegiado() {
 
                	
-				var xnumero = $("#numero").val();
+				var xnumero = $("#numero").val().toUpperCase();
 				var xnombre = $("#nombre").val().toUpperCase();
     		  	var xapellidos = $("#apellidos").val().toUpperCase();
-				var xtelefono = $("#telefono").val();
 				var xcorreo = $("#correo").val();
 				var xpa1 = $("#pa1").val();
 								
-				var xregid = $("#regId").val();
-				
-				var nmovil = xtelefono.substring(0, 1);
-					
+				var xregid = localStorage.regid;
+				var xuuid = localStorage.uuid;
+									
 				
 		if(document.formulario1.numero.value.length ==  ""){
 		alert("Escriba su número de Socio");
@@ -27,16 +25,6 @@ function registrarColegiado() {
 		alert("Escriba sus apellidos ");
 		document.formulario1.apellidos.focus();
 		return false;	
-		
-		}else if(document.formulario1.telefono.value.length ==  ""){
-		alert("Escriba su número movil ");
-		document.formulario1.telefono.focus();
-		return false;
-		
-		}else if(nmovil != "6"){
-		alert("Telefono erroneo, escriba su móvil");
-		document.formulario1.telefono.focus();
-		return false;
 		
 		}else if(document.formulario1.correo.value.length == ""){
 		alert("Escriba su correo");
@@ -58,7 +46,7 @@ function registrarColegiado() {
 		   $.ajax({
            type: "POST",
            url: "http://rcgtapp.creatactil.com/php/registrocolegiado.php",
-           data: ({numero: xnumero, nombre: xnombre, apellidos: xapellidos, telefono: xtelefono, correo: xcorreo, regid: xregid, pa1: xpa1}),
+           data: ({numero: xnumero, nombre: xnombre, apellidos: xapellidos, correo: xcorreo, regid: xregid, pa1: xpa1, uuid: xuuid,}),
                       cache: false,
                       dataType: "text",
                       success: onSuccess
@@ -80,9 +68,7 @@ function registrarColegiado() {
 		localStorage.pass = xpa1;
 		localStorage.nombre = xnombre;
 		localStorage.apellidos = xapellidos;
-		localStorage.telefono = xtelefono;
-		localStorage.regid = xregid;
-		
+				
 		inicio();
 		globo();
 		}

@@ -68,6 +68,9 @@
 .granate {
 	color: #542876;
 }
+.ui-navbar li .ui-btn{
+	font-size:11px;
+	}
 
 </style>
 
@@ -147,7 +150,7 @@
     <li data-icon="star"><a onClick="listafavorito()" style="text-shadow:none">Favorito</a></li>
     <li data-icon="navigation"><a href="#page15" data-transition="slide" style="text-shadow:none">Web y Redes Sociales</a></li>
     <li data-icon="info"><a href="#page5" data-transition="slide" style="text-shadow:none">Ayuda</a></li>
-    <li data-icon="info"><a href="#page8" data-transition="slide" style="text-shadow:none">Contacto</a></li>
+    <li data-icon="info"><a href="#page8" data-transition="slide" style="text-shadow:none">Contacto Club</a></li>
     <li data-icon="power" ><a onClick="desconectar()" style="text-shadow:none">Salir app</a></li>
     <li data-icon="delete"><a href="#pageone" data-rel="close" style="text-shadow:none">Cerrar menú</a></li>
     
@@ -156,12 +159,13 @@
 <br>
 <center>
 App Diseñada por creaTáctil S.L.
-<a onClick="window.open('http://www.creatactil.com','_blank','location=no','closebuttoncaption=Return')">www.creatactil.com</a>
+<a onClick="window.open('http://www.creatactil.com','_system','location=no','closebuttoncaption=Return')" style="color:#648915">www.creatactil.com</a>
+<br>
+<br>
+<a href="mailto:info@rcreatactil.com" style="color:#648915">info@creatactil.com</a>
 </center>
     </div>
  </div>
-
-  
     
     <div data-role="header" data-theme="a">
 		<a href="#overlayPanel" data-role="button" data-icon="bars" data-iconpos="notext"></a>
@@ -224,9 +228,6 @@ App Diseñada por creaTáctil S.L.
         <label for="apellidos">Apellidos:</label>
         <input name="apellidos" type="text" id="apellidos" value="" placeholder="Apellidos">
        
-        <label for="telefono">Teléfono móvil:</label>
-        <input name="telefono" type="text"  id="telefono" placeholder="Telefono" maxlength="9">
-        
         <label for="correo">Correo electrónico:</label>
         <input name="correo" type="text" id="correo" placeholder="Correo electrónico">
        	  
@@ -562,28 +563,40 @@ La finalidad de la cesión es actualizar la base de datos del Real Club de Golf 
       
       	<div class="ui-grid-a" style="margin-top:10%" >
         	<div class="ui-block-a">
-            	<center><a onClick="window.open('http://www.rcgt.es/','_system');"><img src="imagenes/web.png" width="60" height="60"/></a></center>          
-            </div>
+            	<center><a onClick="window.open('http://www.rcgt.es/','_system');"><img src="imagenes/web.png" width="60" height="60"/></a>
+                <label>Web</label>
+                </center>
+             </div>
             <div class="ui-block-b">        
-            	<center><a onClick="window.open('https://vimeo.com/user11552159','_system');"><img src="imagenes/vimeo.png" width="60" height="60"/></a></center> 
+            	<center><a onClick="window.open('https://vimeo.com/user11552159','_system');"><img src="imagenes/vimeo.png" width="60" height="60"/></a>
+                <label>Vimeo</label>
+                </center> 
             </div>          
         </div>
         <div class="ui-grid-a" style="margin-top:10%;">
         	<div class="ui-block-a">
             	<center>
-                <a href="" onClick="window.open('https://www.facebook.com/golftacoronte','_system');"><img src="imagenes/face.png" width="60" height="60"/></a></center>                          
+                <a href="" onClick="window.open('https://www.facebook.com/golftacoronte','_system');"><img src="imagenes/face.png" width="60" height="60"/></a>		
+                <label>Facebook</label>
+                </center>                          
            </div>
            <div class="ui-block-b">        
-            	<center><a onClick="window.open('https://plus.google.com/116871020359835754601','_system');"><img src="imagenes/googleplus.png" width="60" height="60"/></a></center>
+            	<center><a onClick="window.open('https://plus.google.com/116871020359835754601','_system');"><img src="imagenes/googleplus.png" width="60" height="60"/></a>
+                <label>Google+</label>
+                </center>
           </div>          
        </div>
        <div class="ui-grid-a" style="margin-top:10%;">  
           <div class="ui-block-a">
             	<center>
-                <a href="tel:922636607" ><img src="imagenes/telefono.png" width="60" height="60"/></a></center>                          
+                <a href="tel:922636607" ><img src="imagenes/telefono.png" width="60" height="60"/></a>
+                <label>Teléfono</label>
+                </center>                          
            </div>
            <div class="ui-block-b">        
-            	<center><a a href="mailto:reservas@rcgt.es"><img src="imagenes/correo.png" width="60" height="60"/></a></center>
+            	<center><a href="mailto:reservas@rcgt.es"><img src="imagenes/correo.png" width="60" height="60"/></a>
+                <label>Correo</label>
+                </center>
           </div>
         
         
