@@ -66,13 +66,13 @@ var app = {
        //alert('Callback Success! Result = '+result)
 	   document.getElementById('regId').value = result;
 	   localStorage.regid = result;
-					//alert (e.regid);
+					alert (e.regid);
 					console.log(result);
 					
 					var uuid = device.uuid;
 		
 					localStorage.uuid = uuid;
-					//alert (uuid);
+					alert (uuid);
 				
 					console.log(uuid);
 	   
