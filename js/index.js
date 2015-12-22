@@ -64,7 +64,7 @@ var app = {
     // result contains any message sent from the plugin call
     successHandler: function(result) {
        //alert('Callback Success! Result = '+result)
-	   document.getElementById('regId').value = result;
+	   //document.getElementById('regId').value = result;
 	   
 	   
 	   //alert(result);
