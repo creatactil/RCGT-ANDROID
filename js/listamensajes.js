@@ -71,6 +71,7 @@ function crearLista() {
 					'<br>'+
                     '<a href="" onclick="descargarArchivo(\''+item.enlace+'\')" >'+item.enlace+'</a>'+
 								  '<br>'+
+								  '<br>'+
 								  '<a href="#page11" style="color:#006837"  data-rel="dialog" onClick="textofirma(\''+item.registro+'\' ), textofirma2(\''+item.titulo+'\' )">'+item.firma+'</a>'+
 								   '<br>'+
 								  '<br>'+
