@@ -26,6 +26,9 @@ function crearLista() {
 			var estado = item.estado;
 			var id_aux = item.id_aux;
 			var numero = item.codigo;
+			var xindex = index;
+			
+			$('#id_'+xindex).remove();
 			
 			var verde = "#006837";
 				
