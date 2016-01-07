@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.creatactil.rcgtapp"
-        version   = "1.0.0">
+        version   = "1.0.1">
 
     <name>Real Club Golf Tenerife</name>
 
@@ -17,7 +17,7 @@
     </author>
 	
 	<gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>100</string>
+    <string>101</string>
     </gap:config-file>
 
     <preference name="permissions"                value="none"/>
