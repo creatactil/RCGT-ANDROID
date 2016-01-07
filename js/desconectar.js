@@ -1,5 +1,5 @@
 function desconectar(){
 	
-	localStorage.removeItem("dni");
+	localStorage.removeItem("numero");
 	$.mobile.changePage("#pagina0");
 	}

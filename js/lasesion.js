@@ -1,5 +1,5 @@
 function lasesion(){
-var xdni = localStorage.dni;
+var xnumero = localStorage.numero;
 
 
 if (typeof numero == 'undefined'){
